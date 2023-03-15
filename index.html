@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+   <style>
+   *{
+    padding: 0px;
+    margin: 0px;
+   }
+   body{
+    background-image: linear-gradient(0deg,rgb(166, 17, 81),black);
+    background-size: 100% 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s;
+   }
+   body:hover{
+    background-image: linear-gradient(0deg,rgba(73, 174, 124, 0.867),black);
+   }
+   div{
+    width: 50%;
+    float: left;
+    align-items: center;
+    justify-content: center;
+   }
+   #c{
+    color: white;
+    text-shadow: 5px 10px 10px black;
+    font-size: 250px;
+    position: relative;
+    top: 250px;
+    left: -200px;
+    transition: all 2s;
+   }
+  #c:hover{
+    color: black;
+    text-shadow: 5px 10px 10px white;
+
+  }
+   #container{
+    width: 20%;
+    position: absolute;
+    top: 200px;
+    left: 570px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color:rgba(160, 115, 115, 0);
+    box-shadow:0px 10px 20px rgba(160, 115, 115, 0.5),0px 6px 6px rgba(160, 115, 115, 0.5),2px 2px 2px white ;
+   }
+   #a{
+    background-color: rgb(225, 61, 94);
+    width: 96%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+   }
+   #but{
+    width: 23%;
+    height: 40px;
+    color: rgb(225, 61, 94);
+    background-color: black;
+    transition: all 0s;
+    border-color:rgb(225, 61, 94) ;
+   }
+   #but:hover{
+    background-color: rgb(225, 61, 94) ;
+    border-color: black;
+    color: black;
+   }
+   #Clear{
+    width: 45%;
+    height: 30px;
+    color: rgb(225, 61, 94);
+    border-color:rgb(225, 61, 94) ;
+    background-color: black;
+   }
+   #Clear:hover{
+    background-color: rgb(225, 61, 94) ;
+    color: black;
+    border-color: black;
+
+   }
+   #equal{
+    width: 45%;
+    height: 30px;
+    color: rgb(225, 61, 94);
+    border-color:rgb(225, 61, 94) ;
+    background-color: black;
+    position: relative;
+    left: 15px;
+   }
+   #equal:hover{
+    background-color: rgb(225, 61, 94) ;
+    color: black;
+    background-color: rgb(225, 61, 94) ;
+    border-color: black;
+   }
+   </style>
+</head>
+<body>
+    <div><h1 id="c">Calculator</h1></div>
+    <div id="container">
+        <form name="cform">
+            <input type="text" name="answer" id="a">
+            <br><br>
+            <input type="button" value="1" onclick="cform.answer.value +='1'" id="but">
+            <input type="button" value="2" onclick="cform.answer.value +='2'" id="but">
+            <input type="button" value="3" onclick="cform.answer.value +='3'" id="but">
+            <input type="button" value="+" onclick="cform.answer.value +='+'" id="but">
+            <br><br>
+            <input type="button" value="4" onclick="cform.answer.value +='4'" id="but">
+            <input type="button" value="5" onclick="cform.answer.value +='5'" id="but">
+            <input type="button" value="6" onclick="cform.answer.value +='6'" id="but">
+            <input type="button" value="-" onclick="cform.answer.value +='-'" id="but">
+            <br><br>
+            <input type="button" value="7" onclick="cform.answer.value +='7'" id="but">
+            <input type="button" value="8" onclick="cform.answer.value +='8'" id="but">
+            <input type="button" value="9" onclick="cform.answer.value +='9'" id="but">
+            <input type="button" value="*" onclick="cform.answer.value +='*'" id="but">
+            <br><br>
+            <input type="button" value="/" onclick="cform.answer.value +='/'" id="but">
+            <input type="button" value="0" onclick="cform.answer.value +='0'" id="but">
+            <input type="button" value="." onclick="cform.answer.value +='.'" id="but">
+            <input type="button" value="%" onclick="cform.answer.value +='%'" id="but">
+            <br><br>
+            <input type="button" value="Clear" onclick="cform.answer.value = ' '" id="Clear">
+            <input type="button" value="=" onclick="cform.answer.value =eval(cform.answer.value)" id="equal">
+        </form>
+    </div>
+</body>
+</html>
